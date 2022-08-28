@@ -71,7 +71,7 @@
     }
   }
 
-  setQuiz(quizSet, currentNum, qimg);
+  setQuiz(quizSet, currentNum, qimg ,score);
   //ボタンクリック
   btn.addEventListener('click', () => {
     if (btn.classList.contains('disabled')) {
@@ -92,7 +92,7 @@
       result.classList.remove(`hidden`);
     }else{
       currentNum++;
-      setQuiz(quizSet, currentNum, qimg);
+      setQuiz(quizSet, currentNum, qimg ,score);
     }
   });
 }
