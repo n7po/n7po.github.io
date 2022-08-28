@@ -49,26 +49,6 @@
           </p>
         </div>
       </section>
-      <!-- <section>
-        <div class="pic">
-          <img src="img/feature2.png" alt="すごい特徴のイメージ">
-        </div>
-        <div class="desc">
-          <h2>すごい特徴</h2>
-          <p>すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。</p>
-          <p>すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。</p>
-        </div>
-      </section>
-      <section>
-        <div class="pic">
-          <img src="img/feature3.png" alt="すごい特徴のイメージ">
-        </div>
-        <div class="desc">
-          <h2>すごい特徴</h2>
-          <p>すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。</p>
-          <p>すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。すごいです。</p>
-        </div>
-      </section> -->
     </div>
   </section>
 
@@ -79,7 +59,7 @@
       <section>
         <h2>1日目</h2>
         <p>誕生日当日！なのでゆうくんにまつわるクイズを出すよ！<br>自分のことだから余裕かもね！</p>
-        <a href="#" class="btn">1日目の問題へ</a>
+        <a href="html/day1.html" class="btn">1日目の問題へ</a>
         <footer>
           <img src="img/user1.JPG" alt="ユーザのアイコン" width="40" height="40">
           <p>ナナホ（27）</p>
@@ -88,7 +68,7 @@
       <section>
         <h2>2日目</h2>
         <p>2日目！いよいよ小浜島へ！楽しみだな〜今日はななほにまつわるクイズを出すよ！<br>さすがに１発正解してね！！</p>
-        <a href="#" class="btn">2日目の問題へ</a>
+        <a href="html/day2.html" class="btn">2日目の問題へ</a>
         <footer>
           <img src="img/user1.JPG" alt="ユーザのアイコン" width="40" height="40">
           <p>ナナホ（27）</p>
@@ -97,7 +77,7 @@
       <section>
         <h2>3日目</h2>
         <p>3日目！はいむるぶしいかがでしたか！晴れているといいなあ<br>今日は沖縄に行けなかったムウからの出題です</p>
-        <a href="#" class="btn">3日目の問題へ</a>
+        <a href="html/day3.html" class="btn">3日目の問題へ</a>
         <footer>
           <img src="img/user3.jpg" alt="ユーザのアイコン" width="40" height="40">
           <p>ムウ（3）</p>
@@ -106,7 +86,7 @@
       <section>
         <h2>4日目</h2>
         <p>4日目！いよいよ最終日でちょっと寂しいけど、ムウに会えるからどっこいどっこいだね！<br>最後は私たちにまつわるクイズです！</p>
-        <a href="#" class="btn">4日目の問題へ</a>
+        <a href="html/day4.html" class="btn">4日目の問題へ</a>
         <footer>
           <img src="img/user3.jpg" alt="ユーザのアイコン" width="40" height="40">
           <p>ムウ（3）</p>
@@ -116,16 +96,24 @@
 
   <!-- download -->
   <section class="call-to-action">
-    <h1>4日間のキーワードを足すと...?</h1>
-    <input type="text" name="text is here!" id="">
-    <a href="#" class="btn">決定</a>
-    <!-- <img src="img/b0765.png"  width="200" height="200"> -->
+    <h1>最終問題</h1>
+    <p>この問題は所沢に着いたら解いてね</p>
+    <p>4日間のキーワードを足すと</p>
+    <input type="text" name="text is here!" id="inputarea">
+    <a id="checkAnswer" class="btn">決定</a>
+    <section id="result" class="hidden">
+      <h2 id="p1"></h2>
+      <p id="p2"></p>
+      <a href="" id="goto" class="btn"></a>
+    </section>
   </section>
+
   </div>
 
   <footer class="copyright">
     <small> (c) nanaho.com </small>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

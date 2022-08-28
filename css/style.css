@@ -166,11 +166,17 @@ header .container {
   padding: 64px 0;
   background-color: #ccdde8;
   text-align: center;
+  margin: 0 auto;
+  position: relative;
 }
 
 .call-to-action h1 {
   text-align: center;
   padding-bottom: 64px;
+}
+
+.call-to-action p+p{
+  padding-bottom: 32px;
 }
 
 input{
@@ -182,6 +188,39 @@ input{
 
 .call-to-action .btn {
   margin: 0 auto;
+}
+
+#result{
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background: #fffcf6;
+  opacity: 0.90;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 0 auto; 
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s; 
+}
+
+#result.hidden{
+  transform: translateY(-5000px);
+}
+
+#result > p{
+  font-style: 24px;
+  margin-top: 16px;
+}
+
+#result > a{
+ display: block;
+ text-decoration: none;
+ margin-top: 16px;
 }
 
 /* footer */
@@ -240,4 +279,6 @@ input{
     justify-content: space-between;
   }
 
+  
+  
 }
