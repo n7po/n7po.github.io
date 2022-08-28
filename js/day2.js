@@ -8,11 +8,11 @@
   const perfectMessage = document.getElementById(`p2`);
   const qimg = document.getElementById(`qimage`);
 
-  const quizSet = [
+  const quizSet = shuffle([
     {q: `ナナホがもらったプレゼントで一番嬉しかったのは?` , c:[`ダイソンのドライヤー`,`Apple Watch`,`スチーマー`] , i:`../img/day2-1.png`},
     {q: `ナナホが好きなお寿司のネタはどれ` , c:[`納豆巻き`,`ネギとろ`,`いくら`], i:`../img/day2-2.png`},
     {q: `ナナホの好物は？` , c:[`梨`,`メロン`,`ガルボ`], i:`../img/day1-3.png`},
-  ];
+  ]);
   let currentNum = 0;
   let isAnswered;
   let score = 0;
@@ -29,7 +29,7 @@
   }
 
   // 正誤判定と結果に応じてクラスを分ける
-  function checkAnswer(li){
+  function checkAnswer(li,quizSet, currentNum){
     if(isAnswered){
       return;
     }
@@ -43,7 +43,7 @@
     btn.classList.remove(`disabled`);
   }
 
-  function setQuiz(){
+  function setQuiz(quizSet, currentNum){
     isAnswered = false;
 
     question.textContent = quizSet[currentNum].q;
@@ -59,7 +59,7 @@
       const li = document.createElement(`li`);
       li.textContent = choice;
       li.addEventListener(`click`,() => {
-        checkAnswer(li);
+        checkAnswer(li,quizSet, currentNum);
       })
       choices.appendChild(li);
     });
@@ -69,7 +69,7 @@
     }
   }
 
-  setQuiz();
+  setQuiz(quizSet, currentNum);
   //ボタンクリック
   btn.addEventListener('click', () => {
     if (btn.classList.contains('disabled')) {
@@ -90,7 +90,7 @@
       result.classList.remove(`hidden`);
     }else{
       currentNum++;
-      setQuiz();
+      setQuiz(quizSet, currentNum);
     }
   });
 }
