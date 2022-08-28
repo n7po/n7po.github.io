@@ -29,7 +29,7 @@
   }
 
   // 正誤判定と結果に応じてクラスを分ける
-  function checkAnswer(li,quizSet, currentNum){
+  function checkAnswer(li,quizSet, currentNum,btn,score){
     if(isAnswered){
       return;
     }
