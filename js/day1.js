@@ -1,4 +1,3 @@
-`use strict`;
 {
   const question = document.getElementById(`question`);
   const choices = document.getElementById(`choices`);
