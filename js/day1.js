@@ -1,5 +1,4 @@
-`se strict`;
-
+`use strict`;
 {
   const question = document.getElementById(`question`);
   const choices = document.getElementById(`choices`);
@@ -35,15 +34,17 @@
     }
     isAnswered = true;
     if(li.textContent === quizSet[currentNum].c[0]){
+      console.log(score);
       li.classList.add(`correct`);
       score++;
+      console.log(score);
     }else{
       li.classList.add(`wrong`);
     }
     btn.classList.remove(`disabled`);
   }
 
-  function setQuiz(quizSet, currentNum, qimg){
+  function setQuiz(quizSet, currentNum, qimg ,score){
     isAnswered = false;
 
     question.textContent = quizSet[currentNum].q;
@@ -59,7 +60,8 @@
       const li = document.createElement(`li`);
       li.textContent = choice;
       li.addEventListener(`click`,() => {
-        checkAnswer(li,quizSet, currentNum);
+        console.log(score);
+        checkAnswer(li,quizSet, currentNum,btn, score);
       })
       choices.appendChild(li);
     });
