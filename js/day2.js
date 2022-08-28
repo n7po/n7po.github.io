@@ -43,7 +43,7 @@
     btn.classList.remove(`disabled`);
   }
 
-  function setQuiz(quizSet, currentNum){
+  function setQuiz(quizSet, currentNum, qimg){
     isAnswered = false;
 
     question.textContent = quizSet[currentNum].q;
@@ -69,7 +69,7 @@
     }
   }
 
-  setQuiz(quizSet, currentNum);
+  setQuiz(quizSet, currentNum, qimg);
   //ボタンクリック
   btn.addEventListener('click', () => {
     if (btn.classList.contains('disabled')) {
@@ -90,7 +90,7 @@
       result.classList.remove(`hidden`);
     }else{
       currentNum++;
-      setQuiz(quizSet, currentNum);
+      setQuiz(quizSet, currentNum, qimg);
     }
   });
 }
